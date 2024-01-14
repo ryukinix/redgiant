@@ -1,0 +1,22 @@
+
+[project]
+name = "redgiant"
+version = "0.1.0"
+description = "Redgiant monitors CPU and GPU temperature over time"
+authors = [
+    {name = "Manoel Vilela", email = "manoel_vilela@engineer.com"},
+]
+license = {text = "MIT"}
+dependencies = [
+    "textual>=0.47.1",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.scripts]
+redgiant = "redgiant.main:run"
+
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"

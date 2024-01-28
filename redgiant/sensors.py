@@ -9,10 +9,7 @@ cpu_sensor = "coretemp-isa-0000"
 
 
 def _get_input_temp_field_name(cpu_data: dict) -> str:
-    for field in cpu_data:
-        if "input" in field:
-            return field
-    raise ValueError(f"Not input field found for {cpu_data}")
+    return [f for f in cpu_data if "input" in f].pop()
 
 
 def get_cpu_temperature() -> float:

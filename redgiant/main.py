@@ -1,9 +1,9 @@
-from redgiant import sensors
+from redgiant import tui
 
 
 def run():
-    print("CPU: ", sensors.get_cpu_temperature())
-    print("GPU: ", sensors.get_gpu_temperature())
+    app = tui.TUI()
+    app.run()
 
 
 if __name__ == '__main__':
